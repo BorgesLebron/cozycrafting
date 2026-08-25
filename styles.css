@@ -1,0 +1,337 @@
+/* ============================================
+   Cozy Crafting — styles.css
+   Palette: "Lilás Dream"
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Fuzzy+Bubbles:wght@400;700&family=Sniglet:wght@400;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Lilás Dream palette (from client's actual brand palette) */
+  --lilac-deep:   #E4BDFE;
+  --lilac-mid:    #D8C4F2;
+  --lilac-light:  #F3E8FF;
+  --pink-soft:    #FFD6EC;
+  --pink-pale:    #FFF2F2;
+
+  /* Working aliases so the rest of the file reads by role, not by hex */
+  --color-bg:        var(--lilac-light);
+  --color-surface:   #FFFFFF;
+  --color-nav:       var(--lilac-deep);
+  --color-accent:    var(--lilac-mid);
+  --color-accent-2:  var(--pink-soft);
+  --color-border:    var(--lilac-mid);
+  --color-text:      #4A3B57;
+  --color-text-soft: #6E5C7C;
+  --color-text-nav:  #4A3B57;
+
+  /* Type */
+  --font-display: 'Gochi Hand', cursive;      /* h1 */
+  --font-heading: 'Fuzzy Bubbles', cursive;   /* h2, h3 */
+  --font-body:    'Sniglet', sans-serif;      /* p */
+  --font-footer:  'Quicksand', sans-serif;    /* footer */
+
+  --radius: 14px;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1.75rem 1.5rem 1.25rem;
+  background: var(--color-bg);
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Language toggle (flag pair, top right) */
+.lang-toggle {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+  background: var(--color-accent-2);
+  padding: 0.3rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(150, 100, 170, 0.2);
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 999px;
+  line-height: 0;
+  opacity: 0.55;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-btn .flag {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  transform: translateY(-1px);
+}
+
+.lang-btn.active {
+  opacity: 1;
+  background: var(--color-surface);
+}
+
+/* ---------- Nav ---------- */
+.site-nav {
+  background: var(--color-nav);
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.9rem 0.25rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-text-nav);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-bottom-color: var(--color-text-nav);
+}
+
+/* ---------- Main / layout ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.page-heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.page-subheading {
+  text-align: center;
+  color: var(--color-text-soft);
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+}
+
+/* Hero card */
+.hero-card {
+  max-width: 40rem;
+  margin: 0 auto 3rem;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  border-color: var(--lilac-deep);
+  color: var(--color-text-soft);
+}
+
+/* Feature grid (2x2 on desktop) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.feature-card {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  color: var(--color-text-soft);
+}
+
+/* Shop grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  min-height: 260px;
+  border-style: dashed;
+}
+
+.product-card .product-image-placeholder {
+  height: 140px;
+  border-radius: 10px;
+  background: var(--color-accent-2);
+  margin-bottom: 1rem;
+}
+
+/* About page */
+.about-content {
+  max-width: 40rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-photo-placeholder {
+  height: 220px;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  border: 1px dashed var(--lilac-deep);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--color-nav);
+  font-family: var(--font-footer);
+  padding: 2.5rem 1.5rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(74, 59, 87, 0.25);
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--color-text-soft);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 2.25rem;
+  }
+
+  .lang-toggle {
+    top: 1.1rem;
+    right: 1rem;
+  }
+
+  .site-nav ul {
+    gap: 1.5rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--lilac-deep);
+  outline-offset: 2px;
+}
