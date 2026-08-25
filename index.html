@@ -3,10 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/BorgesLebron/cozycrafting/assets/c2.png">
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/BorgesLebron/cozycrafting/assets/c2.png">
+  <link rel="icon" type="image/png" href="/assets/c2.png">
+  <link rel="apple-touch-icon" href="/assets/c2.png">
+  <meta name="apple-mobile-web-app-title" content="Cozy Crafting">
   <title data-en="Cozy Crafting | Handmade with Love" data-es="Cozy Crafting | Hecho a Mano con Amor">Cozy Crafting | Handmade with Love</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .site-container {
+      position: relative;
+      min-height: 400px;
+    }
+    .real-content {
+      padding: 20px;
+    }
+    .construction-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 2.5rem;
+      z-index: 10;
+    }
+    .banner {
+      background-color: #e407fd;
+      color: #fefdfd;
+      padding: 12px 32px;
+      font-weight: bold;
+      font-size: 3rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 6px rgba(36, 35, 35, 0.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -32,26 +66,49 @@
   </nav>
 
   <main>
-    <!-- Hero card: empty placeholder, content to come later -->
-    <section class="card hero-card">
-      <p data-en="Hero content coming soon." data-es="Contenido principal próximamente.">Hero content coming soon.</p>
-    </section>
 
-    <!-- Feature cards: 2x2 grid, empty placeholders -->
-    <section class="feature-grid" aria-label="Features">
-      <div class="card feature-card">
-        <p data-en="Feature 1 coming soon." data-es="Función 1 próximamente.">Feature 1 coming soon.</p>
+    <div class="site-container">
+      <!-- Your actual content goes here -->
+      <div class="real-content">
+        <h1>Welcome to Cozy Crafting</h1>
+        <p>Under Construction.</p>
       </div>
-      <div class="card feature-card">
-        <p data-en="Feature 2 coming soon." data-es="Función 2 próximamente.">Feature 2 coming soon.</p>
+
+      <!-- Blur and Banner Overlay -->
+      <div class="construction-overlay">
+        <div class="banner">Under Construction</div>
       </div>
-      <div class="card feature-card">
-        <p data-en="Feature 3 coming soon." data-es="Función 3 próximamente.">Feature 3 coming soon.</p>
-      </div>
-      <div class="card feature-card">
-        <p data-en="Feature 4 coming soon." data-es="Función 4 próximamente.">Feature 4 coming soon.</p>
-      </div>
-    </section>
+
+      <!-- Hero card: empty placeholder, content to come later -->
+      <section class="card hero-card">
+        <p data-en="Hero content coming soon." data-es="Contenido principal próximamente.">Hero content coming soon.</p>
+      </section>
+
+      <!-- Product cards -->
+      <section class="product-grid" aria-label="Products">
+        <div class="card product-card">
+          <div class="product-image-placeholder"></div>
+          <h3 data-en="FiFilu Coloring Book" data-es="Libro para Colorear FiFilu">FiFilu Coloring Book</h3>
+          <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
+        </div>
+        <div class="card product-card">
+          <div class="product-image-placeholder"></div>
+          <h3 data-en="FiFilu Cozy Wonders Tote Bag" data-es="Bolsa Tote FiFilu Cozy Wonders">FiFilu Cozy Wonders Tote Bag</h3>
+          <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
+        </div>
+        <div class="card product-card">
+          <div class="product-image-placeholder"></div>
+          <h3 data-en="Protector Sheet" data-es="Hoja Protectora">Protector Sheet</h3>
+          <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
+        </div>
+        <div class="card product-card">
+          <div class="product-image-placeholder"></div>
+          <h3 data-en="Paper Clip" data-es="Clip de Papel">Paper Clip</h3>
+          <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
+        </div>
+      </section>
+    </div>
+
   </main>
 
   <footer class="site-footer">
