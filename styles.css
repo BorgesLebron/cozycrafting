@@ -228,7 +228,7 @@ main {
 .product-card .product-photo,
 .product-card .product-image-placeholder {
   width: 100%;
-  height: 180px;
+  height: 260px;
   border-radius: 10px;
   object-fit: cover;
   margin-bottom: 1rem;
