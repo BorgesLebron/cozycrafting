@@ -31,27 +31,67 @@
 
   <main>
     <h1 class="page-heading" data-en="Shop" data-es="Tienda">Shop</h1>
-    <p class="page-subheading" data-en="Browse our handmade pieces. Products coming soon!" data-es="Explora nuestras piezas hechas a mano. ¡Productos próximamente!">
-      Browse our handmade pieces. Products coming soon!
+    <p class="page-subheading" data-en="Handmade pieces from the world of Fifi-Lu." data-es="Piezas hechas a mano del mundo de Fifi-Lu.">
+      Handmade pieces from the world of Fifi-Lu.
     </p>
 
-    <!-- Product cards: empty placeholders, to be filled in with real products/prices later -->
-    <section class="product-grid" aria-label="Products">
-      <div class="card product-card">
-        <div class="product-image-placeholder"></div>
-        <h3 data-en="Product Name" data-es="Nombre del Producto">Product Name</h3>
-        <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
-      </div>
-      <div class="card product-card">
-        <div class="product-image-placeholder"></div>
-        <h3 data-en="Product Name" data-es="Nombre del Producto">Product Name</h3>
-        <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
-      </div>
-      <div class="card product-card">
-        <div class="product-image-placeholder"></div>
-        <h3 data-en="Product Name" data-es="Nombre del Producto">Product Name</h3>
-        <p data-en="Price coming soon." data-es="Precio próximamente.">Price coming soon.</p>
-      </div>
+    <!-- Full product listings -->
+    <section class="shop-listings" aria-label="Products">
+
+      <article id="tote-bag" class="card product-listing">
+        <div class="product-photos">
+          <img src="/assets/fifi-lu-1.jpeg" alt="Fifi-Lu Natural Cotton Tote Bag" />
+        </div>
+        <div class="product-info">
+          <h3 data-en="Fifi-Lu Natural Cotton Tote Bag" data-es="Bolso Tote Fifi-Lu de Algodón Natural">Fifi-Lu Natural Cotton Tote Bag</h3>
+          <p class="price-tag">$30</p>
+          <p data-en="Inspired by the whimsical world of Fifi-Lu, this natural cotton tote bag is made to carry your favorite book, coloring supplies, journals, or anything you love to take along." data-es="Inspirado en el mundo fantasioso de Fifi-Lu, este bolso tote de algodón natural está hecho para llevar tu libro favorito, materiales para colorear, diarios o cualquier cosa que te guste tener contigo.">Inspired by the whimsical world of Fifi-Lu, this natural cotton tote bag is made to carry your favorite book, coloring supplies, journals, or anything you love to take along.</p>
+          <p data-en="It serves as a simple reminder: you have the power to create, imagine, and shape a life that feels like your own." data-es="Es un recordatorio sencillo: tienes el poder de crear, imaginar y darle forma a una vida que se sienta verdaderamente tuya.">It serves as a simple reminder: you have the power to create, imagine, and shape a life that feels like your own.</p>
+          <ul class="details-list">
+            <li data-en="Natural cotton" data-es="Algodón natural">Natural cotton</li>
+            <li data-en="Size: 15&quot; x 16&quot;" data-es="Tamaño: 15&quot; x 16&quot;">Size: 15" x 16"</li>
+            <li data-en="Lightweight and spacious" data-es="Liviano y espacioso">Lightweight and spacious</li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="coloring-book" class="card product-listing">
+        <div class="product-photos">
+          <img src="/assets/fifi-lu-1.jpeg" alt="Fifi-Lu Cozy Wonders Coloring Book, cover" />
+          <img src="/assets/fifi-lu-2.jpeg" alt="Fifi-Lu Cozy Wonders Coloring Book, inside pages" />
+        </div>
+        <div class="product-info">
+          <h3 data-en="Fifi-Lu Cozy Wonders Coloring Book" data-es="Libro para Colorear Fifi-Lu Cozy Wonders">Fifi-Lu Cozy Wonders Coloring Book</h3>
+          <p class="price-tag">$12.99</p>
+          <p data-en="Step into a whimsical world filled with cozy corners, sweet friends, tiny adventures, and everyday moments waiting to be colored." data-es="Adéntrate en un mundo fantasioso lleno de rincones acogedores, dulces amistades, pequeñas aventuras y momentos cotidianos esperando ser coloreados.">Step into a whimsical world filled with cozy corners, sweet friends, tiny adventures, and everyday moments waiting to be colored.</p>
+          <p data-en="Fifi-Lu Cozy Wonders is an original coloring book created for anyone who loves slowing down, getting creative, and enjoying the simple things in life." data-es="Fifi-Lu Cozy Wonders es un libro para colorear original, creado para quienes aman tomarse las cosas con calma, ser creativos y disfrutar de las cosas simples de la vida.">Fifi-Lu Cozy Wonders is an original coloring book created for anyone who loves slowing down, getting creative, and enjoying the simple things in life.</p>
+          <ul class="details-list">
+            <li data-en="30 original coloring pages" data-es="30 páginas originales para colorear">30 original coloring pages</li>
+            <li data-en="77 pages" data-es="77 páginas">77 pages</li>
+            <li data-en="2 color swatch pages to test your favorite coloring mediums" data-es="2 páginas de muestra de color para probar tus técnicas favoritas">2 color swatch pages to test your favorite coloring mediums</li>
+            <li data-en="8.5&quot; × 8.5&quot; square format" data-es="Formato cuadrado de 8.5&quot; × 8.5&quot;">8.5" × 8.5" square format</li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="page-protector" class="card product-listing">
+        <div class="product-photos">
+          <img src="/assets/fifi-clip.jpeg" alt="Page Protector and Decorative Paper Clip" />
+        </div>
+        <div class="product-info">
+          <h3 data-en="Page Protector &amp; Decorative Paper Clip" data-es="Protector de Página y Clip Decorativo">Page Protector &amp; Decorative Paper Clip</h3>
+          <p class="price-tag">$8</p>
+          <p data-en="Add a little coziness to your coloring experience with this decorative page protector, created especially for your Fifi-Lu Cozy Wonders coloring book." data-es="Añade un toque de calidez a tu experiencia de colorear con este protector de página decorativo, creado especialmente para tu libro Fifi-Lu Cozy Wonders.">Add a little coziness to your coloring experience with this decorative page protector, created especially for your Fifi-Lu Cozy Wonders coloring book.</p>
+          <p data-en="Each page protector comes with a handmade decorative paper clip, finished with colorful beads and a charming character charm. A sweet little accessory designed to add a touch of personality and sparkle to your cozy coloring moments." data-es="Cada protector de página incluye un clip decorativo hecho a mano, terminado con cuentas de colores y un encantador dije de personaje. Un pequeño accesorio dulce, diseñado para darle un toque de personalidad y brillo a tus momentos de colorear.">Each page protector comes with a handmade decorative paper clip, finished with colorful beads and a charming character charm. A sweet little accessory designed to add a touch of personality and sparkle to your cozy coloring moments.</p>
+          <ul class="details-list">
+            <li data-en="Page protector: approximately 8.25&quot; x 8.25&quot;" data-es="Protector de página: aproximadamente 8.25&quot; x 8.25&quot;">Page protector: approximately 8.25" x 8.25"</li>
+            <li data-en="Handmade paper clip: approximately 4&quot; long" data-es="Clip de papel hecho a mano: aproximadamente 4&quot; de largo">Handmade paper clip: approximately 4" long</li>
+            <li data-en="Colorful decorative beads" data-es="Cuentas decorativas de colores">Colorful decorative beads</li>
+            <li data-en="Character charm" data-es="Dije de personaje">Character charm</li>
+          </ul>
+        </div>
+      </article>
+
     </section>
   </main>
 

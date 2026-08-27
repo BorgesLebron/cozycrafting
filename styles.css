@@ -214,7 +214,7 @@ main {
   color: var(--color-text-soft);
 }
 
-/* Shop grid */
+/* Shop grid (homepage teaser cards) */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -222,15 +222,88 @@ main {
 }
 
 .product-card {
-  min-height: 260px;
-  border-style: dashed;
+  text-align: center;
 }
 
+.product-card .product-photo,
 .product-card .product-image-placeholder {
-  height: 140px;
+  width: 100%;
+  height: 180px;
   border-radius: 10px;
-  background: var(--color-accent-2);
+  object-fit: cover;
   margin-bottom: 1rem;
+  background: var(--color-accent-2);
+}
+
+.product-card .price-tag {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.product-card .shop-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  background: var(--color-accent-2);
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.product-card .shop-link:hover {
+  background: var(--lilac-deep);
+}
+
+/* Full product listings (shop page) */
+.shop-listings {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.product-listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.product-photos {
+  flex: 0 0 260px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-photos img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1 1 260px;
+}
+
+.product-info .price-tag {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+}
+
+.product-info .details-list {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.product-info .details-list li {
+  margin-bottom: 0.35rem;
 }
 
 /* About page */
