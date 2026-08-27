@@ -274,7 +274,7 @@ main {
 }
 
 .product-photos {
-  flex: 0 0 280px;
+  flex: 0 0 290px;
   max-width: 260px;
   display: flex;
   flex-direction: column;
