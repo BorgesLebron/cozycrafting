@@ -324,7 +324,7 @@ main {
 }
 
 .about-photo {
-  height: 220px;
+  height: 500px;
   border-radius: var(--radius);
   background: var(--color-accent);
   border: 1px dashed var(--lilac-deep);
