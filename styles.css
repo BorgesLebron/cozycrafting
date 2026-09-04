@@ -309,6 +309,7 @@ main {
 /* About page */
 .about-content {
   max-width: 40rem;
+  height: 70rem;
   margin: 0 auto;
   display: grid;
   gap: 1.5rem;
