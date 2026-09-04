@@ -377,29 +377,26 @@ main {
 
 /* ---------- Promo card (free download) ---------- */
 .promo-card {
+  position: relative;
+  display: block;
   max-width: 40rem;
   margin: 0 auto 3rem;
   text-align: center;
   background: var(--pink-pale);
   border-color: var(--pink-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.promo-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-}
-
-.promo-icon {
-  font-size: 2rem;
-  line-height: 1;
+.promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(150, 100, 170, 0.25);
 }
 
 .promo-card h2 {
   font-family: var(--font-heading);
-  margin: 0;
+  margin: 0.5rem 0 0.75rem;
   font-size: 1.4rem;
 }
 
@@ -408,8 +405,37 @@ main {
   color: var(--color-text-soft);
 }
 
-.promo-card .shop-link {
-  margin-top: 0.5rem;
+.promo-card .promo-cta {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.promo-character {
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.sparkle {
+  position: absolute;
+  top: 0.5rem;
+  pointer-events: none;
+}
+
+.sparkle-left {
+  left: 0.75rem;
+}
+
+.sparkle-right {
+  right: 0.75rem;
+}
+
+.sparkle img {
+  display: block;
+  width: 36px;
+  height: 36px;
 }
 
 /* ---------- Modal / Lightbox ---------- */
