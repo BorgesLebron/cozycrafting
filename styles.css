@@ -217,10 +217,8 @@ main {
 /* Shop grid (homepage teaser cards) */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  max-width: 46rem;
-  margin: 0 auto;
 }
 
 .product-card {
@@ -379,37 +377,28 @@ main {
 .promo-card {
   max-width: 40rem;
   margin: 0 auto 3rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   background: var(--pink-pale);
   border-color: var(--pink-soft);
 }
 
-.promo-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-}
-
 .promo-icon {
-  font-size: 2rem;
+  flex: 0 0 auto;
+  font-size: 2.75rem;
   line-height: 1;
 }
 
-.promo-card h2 {
+.promo-info h2 {
   font-family: var(--font-heading);
-  margin: 0;
+  margin: 0 0 0.4rem;
   font-size: 1.4rem;
 }
 
-.promo-card p {
+.promo-info p {
   margin: 0 0 1rem;
   color: var(--color-text-soft);
-}
-
-.promo-card .shop-link {
-  margin-top: 0.5rem;
 }
 
 /* ---------- Modal / Lightbox ---------- */
@@ -502,6 +491,13 @@ body.modal-open {
   cursor: zoom-in;
 }
 
+@media (max-width: 480px) {
+  .promo-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 600px) {
   .site-title {
@@ -518,10 +514,6 @@ body.modal-open {
   }
 
   .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-grid {
     grid-template-columns: 1fr;
   }
 
