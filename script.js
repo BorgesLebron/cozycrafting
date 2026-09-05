@@ -3,6 +3,10 @@
 // Handles the English / Español toggle.
 // Any element with data-en / data-es attributes
 // will have its text swapped automatically.
+// Add a data-html attribute to an element if its
+// data-en/data-es values contain HTML tags (e.g.
+// <strong>) that should render as markup rather
+// than literal text.
 // ============================================
 
 (function () {
@@ -14,7 +18,11 @@
     document.querySelectorAll("[data-en]").forEach((el) => {
       const text = lang === "es" ? el.getAttribute("data-es") : el.getAttribute("data-en");
       if (text !== null) {
-        el.textContent = text;
+        if (el.hasAttribute("data-html")) {
+          el.innerHTML = text;
+        } else {
+          el.textContent = text;
+        }
       }
     });
 
@@ -23,6 +31,10 @@
       btn.classList.toggle("active", isActive);
       btn.setAttribute("aria-pressed", isActive ? "true" : "false");
     });
+
+    if (typeof window.onLanguageChange === "function") {
+      window.onLanguageChange(lang);
+    }
   }
 
   function setLanguage(lang) {
