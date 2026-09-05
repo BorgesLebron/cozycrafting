@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#E4BDFE">
+  <meta name="apple-mobile-web-app-title" content="Cozy Crafting">
   <title data-en="About | Cozy Crafting" data-es="Acerca de | Cozy Crafting">About | Cozy Crafting</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -11,13 +18,20 @@
   <header class="site-header">
     <a href="index.html" class="site-title">Cozy Crafting</a>
 
-    <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button class="lang-btn" data-lang-btn="en" aria-pressed="true" aria-label="English">
-        <span class="flag" aria-hidden="true">🇺🇸</span>
+    <div class="header-actions">
+      <button type="button" class="cart-toggle" data-cart-toggle aria-label="Open cart">
+        🛍️
+        <span class="cart-badge" data-cart-count hidden>0</span>
       </button>
-      <button class="lang-btn" data-lang-btn="es" aria-pressed="false" aria-label="Español">
-        <span class="flag" aria-hidden="true">🇵🇷</span>
-      </button>
+
+      <div class="lang-toggle" role="group" aria-label="Language selector">
+        <button class="lang-btn" data-lang-btn="en" aria-pressed="true" aria-label="English">
+          <span class="flag" aria-hidden="true">🇺🇸</span>
+        </button>
+        <button class="lang-btn" data-lang-btn="es" aria-pressed="false" aria-label="Español">
+          <span class="flag" aria-hidden="true">🇵🇷</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -80,5 +94,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>
