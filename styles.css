@@ -314,6 +314,54 @@ main {
   margin-bottom: 0.35rem;
 }
 
+/* Downloads page */
+.downloads-section {
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+}
+
+.downloads-section-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  margin: 0 0 0.35rem;
+  text-align: center;
+}
+
+.downloads-section-subheading {
+  text-align: center;
+  color: var(--color-text-soft);
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+}
+
+.worksheet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.worksheet-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.worksheet-card h3 {
+  font-family: var(--font-heading);
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.worksheet-card p {
+  color: var(--color-text-soft);
+  flex: 1;
+  margin: 0 0 1rem;
+}
+
+.worksheet-card .shop-link {
+  align-self: center;
+}
+
 /* About page */
 .about-content {
   max-width: 40rem;
