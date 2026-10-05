@@ -33,4 +33,10 @@ window.PRODUCT_CATALOG = {
     price: 800,
     image: "/assets/fifi-clip.jpeg",
   },
+  "pencil-pouch": {
+    nameEn: "Cozy Pencil Pouch",
+    nameEs: "Cartuchera Cozy",
+    price: 1200,
+    image: "/assets/pouch-1.jpeg",
+  },
 };
